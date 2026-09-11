@@ -1,0 +1,40 @@
+menu "SDCARD"
+	menu "SDSPI"
+		config SDCARD_SDSPI_MOSI
+			int "SPI Mosi"
+			default 4
+			range 0 48
+			help
+				"GPIO number of Mosi"
+		config SDCARD_SDSPI_MISO
+			int "SPI Miso"
+			default 5
+			range 0 48
+			help
+				"GPIO number of Miso"
+		config SDCARD_SDSPI_SCK
+			int "SPI Sck"
+			default 3
+			range 0 48
+			help
+				"GPIO number of Sck"
+		config SDCARD_SDSPI_CS
+			int "SPI Cs"
+			default 48
+			range 0 48
+			help
+				"GPIO number of Cs"
+	endmenu
+	# menu "SDMMC"
+	# endmenu
+	config SDCARD_MOUNT_PATH
+		string "Mount path"
+		default "sdcard"
+		help
+			"Mount path for sdcard (without /)"
+	config SDCARD_MAX_FILES
+		int "Max files"
+		default 1
+		help
+			"Max simultaneous opened files"
+endmenu

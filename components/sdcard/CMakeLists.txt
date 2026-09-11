@@ -1,0 +1,10 @@
+idf_component_register(
+  SRCS
+  "sdcard.c"
+  INCLUDE_DIRS
+  "include"
+  PRIV_REQUIRES
+  vfs
+  fatfs
+  sdmmc
+  esp_driver_sdspi)
