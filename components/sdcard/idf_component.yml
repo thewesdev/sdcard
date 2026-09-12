@@ -1,0 +1,9 @@
+version: "0.0.1"
+description: "Simple SDCARD component for ESP32"
+url: "https://github.com/thewesdev/sdcard"
+repository: "https://github.com/thewesdev/sdcard.git"
+license: "MIT"
+tags:
+  - "sdcard"
+  - "sdspi"
+  - "wrapper"
