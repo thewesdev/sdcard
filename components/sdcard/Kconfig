@@ -1,5 +1,16 @@
 menu "SDCARD"
+	choice SDCARD_API
+		prompt "SDCard Api"
+		default SDCARD_API_SDSPI
+		help
+			"Set Sdcard Api [SDSPI or SDMMC(Not implemented)]"
+		config SDCARD_API_SDSPI
+			bool "SDSPI"
+		config SDCARD_API_SDMMC
+			bool "SDMMC"
+	endchoice
 	menu "SDSPI"
+		depends on SDCARD_API_SDSPI
 		config SDCARD_SDSPI_MOSI
 			int "SPI Mosi"
 			default 4

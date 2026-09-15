@@ -4,9 +4,7 @@
 #include "sdcard.h"
 
 namespace sdcard {
-	inline esp_err_t init(sdcard_api_t sdcard_api) {
-		return sdcard_init(sdcard_api);
-	}
+	inline esp_err_t init() { return sdcard_init(); }
 } // namespace sdcard
 
 #endif

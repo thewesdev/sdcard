@@ -9,7 +9,7 @@ extern "C" {
 
 typedef enum { SDCARD_API_SDSPI, SDCARD_API_SDMMC } sdcard_api_t;
 
-esp_err_t sdcard_init(sdcard_api_t sdcard_api);
+esp_err_t sdcard_init();
 
 #ifdef __cplusplus
 }

@@ -8,7 +8,13 @@
 
 const static char *TAG = "SDCARD";
 
-esp_err_t sdcard_init(sdcard_api_t sdcard_api) {
+#if CONFIG_SDCARD_API == SDCARD_API_SDSPI
+const static sdcard_api_t sdcard_api = SDCARD_API_SDSPI;
+#else
+const static sdcard_api_t sdcard_api = SDCARD_API_SDMMC;
+#endif
+
+esp_err_t sdcard_init() {
 	esp_err_t err;
 
 	if (sdcard_api == SDCARD_API_SDSPI) {
